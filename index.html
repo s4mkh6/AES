@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AES Cipher</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+<div class="wrapper">
+    <h1>AES Cipher</h1>
+<div class="inner">
+
+  <div class="container">
+<h3>Mã hóa</h3>
+    <div class="form">
+      <label for="message">Message:</label>
+      <input type="text" id="message"><br><br>
+      <label for="key">Key:</label>
+      <input type="text" id="key"><br><br>
+      <label for="level">Encryption Level:</label>
+      <select id="level">
+        <option value="128">128-bit</option>
+        <option value="192">192-bit</option>
+        <option value="256">256-bit</option>
+      </select><br><br>
+      <button onclick="encryptMessage()">Encrypt</button>
+      <br><br>
+      <label  for="result">Result:</label>
+      <div class="text_red" id="result"></div>
+    </div>
+  </div>
+  <div class="container">
+  <h3>Giải Mã</h3>
+    <div class="form">
+      <label for="ciphertext">Ciphertext:</label>
+      <input type="text" id="ciphertext"><br><br>
+      <label for="key-decrypt">Key:</label>
+      <input type="text" id="key-decrypt"><br><br>
+      <label for="level-decrypt">Encryption Level:</label>
+      <select id="level-decrypt">
+        <option value="128">128-bit</option>
+        <option value="192">192-bit</option>
+        <option value="256">256-bit</option>
+      </select><br><br>
+      <button onclick="decryptMessage()">Decrypt</button>
+      <br><br>
+      <label for="plaintext">Plaintext:</label>
+	   <div class="text_blue" id="plaintext"></div>
+     
+    </div>
+  </div>
+
+</div>
+
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
